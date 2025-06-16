@@ -1,0 +1,24 @@
+version: 2
+
+build:
+  commands:
+    - npm install
+    - npm run build
+
+run:
+  command: npm start
+
+env:
+  - key: PORT
+    value: 5000
+  - key: MONGO_URI
+    sync: mongodb_uri
+  - key: JWT_SECRET
+    sync: jwt_secret
+  - key: RAZORPAY_KEY_ID
+    sync: razorpay_key_id
+  - key: RAZORPAY_KEY_SECRET
+    sync: razorpay_key_secret
+  - key: RAZORPAY_WEBHOOK_SECRET
+    sync: razorpay_webhook_secret
+
