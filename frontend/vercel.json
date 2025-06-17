@@ -1,0 +1,19 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "frontend/package.json",
+      "use": "@vercel/static-build",
+      "config": {
+        "distDir": "dist"
+      },
+      "root": "frontend" // <--- THIS IS CRUCIAL FOR MONOREPOS
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "/frontend/index.html" // <--- Updated path for root index.html
+    }
+  ]
+}
