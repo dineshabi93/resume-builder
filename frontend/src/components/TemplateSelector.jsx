@@ -34,10 +34,10 @@ const TemplateSelector = ({ currentTemplate, onSelect, onClose, isPremium }) => 
   ];
 
   const handleTemplateSelect = (template) => {
-    if (template.isPremium && !isPremium) {
-      alert('This template requires a premium subscription. Please upgrade to access premium templates.');
-      return;
-    }
+    //if (template.isPremium && !isPremium) {
+    //  alert('This template requires a premium subscription. Please upgrade to access premium templates.');
+     // return;
+   // }
     onSelect(template.id);
   };
 
@@ -76,7 +76,7 @@ const TemplateSelector = ({ currentTemplate, onSelect, onClose, isPremium }) => 
                 onClick={() => handleTemplateSelect(template)}
               >
                 {/* Premium Badge */}
-                {template.isPremium && (
+                {/*template.isPremium && (
                   <div className="absolute top-2 right-2 z-10">
                     <div className="bg-gradient-to-r from-yellow-400 to-orange-500 text-white px-2 py-1 rounded-full text-xs font-medium flex items-center">
                       <Crown className="h-3 w-3 mr-1" />
