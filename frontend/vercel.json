@@ -14,10 +14,5 @@
       "src": "/(.*)",
       "dest": "/index.html"
     }
-  ],
-  "env": {
-    "VITE_BACKEND_URL": "@backend_url",
-    "VITE_RAZORPAY_KEY_ID": "@razorpay_key_id"
-  }
+  ]
 }
-
