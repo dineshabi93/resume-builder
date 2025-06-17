@@ -23,7 +23,7 @@ mongoose.connect(process.env.MONGO_URI || 'mongodb://localhost:27017/resume-buil
 // Routes
 app.use('/api/auth', require('./routes/auth'));
 app.use('/api/resumes', require('./routes/resumes'));
-app.use('/api/payments', require('./routes/payments'));
+//app.use('/api/payments', require('./routes/payments'));
 
 // Health check route
 app.get('/', (req, res) => {
